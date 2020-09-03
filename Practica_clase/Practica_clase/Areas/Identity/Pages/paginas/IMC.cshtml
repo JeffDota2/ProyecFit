@@ -1,0 +1,81 @@
+﻿@page
+@model Practica_clase.Areas.Identity.Pages.paginas.IMCModel
+@{
+}
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <title>formulario peso ideal</title>
+    <script type="text/javascript">
+
+        function calculaIMC() {
+
+            var peso, altura, imc, leyenda;
+
+            peso = document.getElementById("peso").value;
+            altura = document.getElementById("altura").value / 100;
+
+            imc = peso / (altura * altura);
+
+            document.getElementById("imc").value = imc.toFixed(2);
+
+            if (imc <= 18.5) {
+                leyenda = "Estas delgado" + (altura * altura * 18.5 - peso).toFixed(1) + " kilos";
+            }
+            else if (imc >= 25) {
+                leyenda = "Tienes sobrepeso" + (peso - altura * altura * 25).toFixed(1) + " kilos";
+            }
+            else {
+                leyenda = "Tiene un peso ideal";
+            }
+            document.getElementById("leyenda").value = leyenda;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <div>
+            <form name="f1" id="f1" action="">
+                <fieldset>
+                    <legend>CALCULADORA DEL PESO IDEAL IMC (Índice de Masa Corporal)</legend>
+                    <br /><br />
+                    Ingrese el Peso en Kg:  <input type="text" name="peso" id="peso" size="3" maxlength="4">
+                    <br /><br />
+                    Ingrese la Altura en Cm:  <input type="text" name="altura" id="altura" size="3" maxlength="3">
+                    <br /><br />
+                    <input type="button" value="Calcular IMC" onClick="calculaIMC()">
+                    <br /><br />
+                    IMC: <input type="text" name="imc" id="imc" size="10" maxlength="15">
+                    <br /><br />
+                    Mensaje: <input type="text" name="leyenda" id="leyenda" size="42">
+
+                </fieldset>
+            </form>
+        </div>
+        <br /><br />
+        <table border="1">
+            <tr>
+                <td><b>COMPOSICIÓN CORPORAL</b></td>
+                <td><b>ÍNDICE DE MASA CORPORAL(IMC)</b></td>
+            </tr>
+            <tr>
+                <td>Peso inferior al normal</td>
+                <td>Menos de 18.5</td>
+            </tr>
+            <tr>
+                <td>Peso Normal</td>
+                <td>18.5 a 24.9</td>
+            </tr>
+            <tr>
+                <td>Peso superior al Normal</td>
+                <td>25.0 a 29.9</td>
+            </tr>
+            <tr>
+                <td>Obesidad</td>
+                <td>Más de 30</td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

@@ -1,0 +1,102 @@
+﻿@page "/Identity/Dietas"
+@model Practica_clase.Areas.Identity.Pages.paginas.DietasModel
+@{
+    ViewData["Title"] = "dietas";
+    var image1 = "/images/images/carne.jpg";
+    var image2 = "/images/images/pez.jpg";
+    var image3 = "/images/images/cereales.jpg";
+    var image4 = "/images/images/frutas.jpg";
+    var image5 = "/images/images/lacteos.jpg";
+    var image6 = "/images/images/verduras.jpg";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <center>
+        <h1>DIETAS</h1>
+        <br />
+
+        <p style="text-align:justify;">
+            Una correcta alimentación, equilibrada y variada, acompañada de unos hábitos de vida saludables,
+            es la receta ideal para conseguir un buen estado de salud. Es importante señalar que una dieta correcta
+            puede ser diferente según las épocas de la vida (infancia, juventud, edad adulta) o en determinadas
+            circunstancias. La dieta además de sana y nutritiva, tiene que configurarse de manera que apetezca
+            comerla y que incluyamos alimentos que estamos acostumbrados a comer.
+
+            <br /><br />
+
+            <table>
+                <tr>
+                    <td>
+                        <output id="ImageUser1">
+                            <a href="/Identity/paginas/dieta/dieta1"><img src=@image2 class="ImageUser1" width="200" height="200" /></a>
+                        </output>
+                        <br>
+                        <center>1. PESCADO</center>
+                    </td>
+
+                    <td>
+                        &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp
+                        <output id="ImageUser2">
+                            <a href="/Identity/paginas/dieta/dieta2"><img src=@image3 class="ImageUser2" width="200" height="200"></a>
+                        </output>
+                        <br>
+                        <center>2. CEREALES</center>
+
+                    </td>
+
+                    <td>
+                        &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp
+                        <output id="ImageUser3">
+                            <a href="/Identity/paginas/dieta/dieta3"><img src=@image4 class="ImageUser3" width="200" height="200"></a>
+                        </output>
+                        <br>
+                        <center>3. FRUTAS</center>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <br />
+                        <output id="ImageUser4">
+                            <a href="/Identity/paginas/dieta/dieta4"><img src=@image1 class="ImageUser4" width="200" height="200"></a>
+                        </output>
+                        <br>
+                        <center>4. CARNE</center>
+                    </td>
+
+                    <td>
+                        <br />
+                        &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp
+                        <output id="ImageUser5">
+                            <a href="/Identity/paginas/dieta/dieta5"><img src=@image6 class="ImageUser5" width="200" height="200"></a>
+                        </output>
+                        <br>
+                        <center>5. VERDURAS</center>
+
+                    </td>
+
+                    <td>
+                        <br />
+                        &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp
+                        <output id="ImageUser6">
+                            <a href="/Identity/paginas/dieta/dieta6"><img src=@image5 class="ImageUser6" width="200" height="200"></a>
+                        </output>
+                        <br>
+                        <center>6. LÁCTEOS</center>
+                    </td>
+                </tr>
+            </table>
+    </center>
+
+</body>
+</html>
